@@ -12,11 +12,11 @@
 #age = datetime.now().year - year
 #print(f"You are {age} years old.")
 
-# find the area of a circle
-# find the radius of a circle
-#r = input("Enter radius of circle: ")
-#a = 3.14 * float(r) ** 2
-#print(f"The area of the circle is {a}")
+#find the area of a circle
+#find the radius of a circle
+r = input("Enter radius of circle: ")
+a = 3.14 * float(r) ** 2
+print(f"The area of the circle is {a}")
 
 percentage=int(input("enter percentage: "))
 num_of_equals=int(percentage//10)
