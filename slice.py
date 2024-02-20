@@ -14,14 +14,15 @@
 
 #find the area of a circle
 #find the radius of a circle
-r = input("Enter radius of circle: ")
-a = 3.14 * float(r) ** 2
-print(f"The area of the circle is {a}")
+# r = input("Enter radius of circle: ")
+# a = 3.14 * float(r) ** 2
+# print(f"The area of the circle is {a}")
 
-percentage=int(input("enter percentage: "))
-num_of_equals=int(percentage//10)
-print("="*num_of_equals)
-print(percentage)
+# percentage=int(input("enter percentage: "))
+# num_of_equals=int(percentage//10)
+# print("="*num_of_equals)
+# print(percentage)
 
-quote="I love python"
-print(quote[::-6])
+# quote="I love python"
+# print(quote[::-6])
+
