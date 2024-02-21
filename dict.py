@@ -94,13 +94,27 @@
 #   print(item)
 
 # Guest List for Eligible
-guests = [
-  {"name": "Alice", "age": 25, "code": "VIP123"},
-  {"name": "Bob", "age": 17, "code": "VIP123"},
-  {"name": "Charlie", "age": 30, "code": "VIP123"},
-  {"name": "Dave", "age": 22, "code": "GUEST"},
-  {"name": "Eve", "age": 29, "code": "VIP123"}
-]
+guests = [{
+    "name": "Alice",
+    "age": 25,
+    "code": "VIP123"
+}, {
+    "name": "Bob",
+    "age": 17,
+    "code": "VIP123"
+}, {
+    "name": "Charlie",
+    "age": 30,
+    "code": "VIP123"
+}, {
+    "name": "Dave",
+    "age": 22,
+    "code": "GUEST"
+}, {
+    "name": "Eve",
+    "age": 29,
+    "code": "VIP123"
+}]
 blacklist = ["Dave", "Eve"]
 
 # Output
@@ -171,20 +185,14 @@ blacklist = ["Dave", "Eve"]
 # print(updated_employees)
 # --------------------------------------------------------------
 
-movie={
-  "name":"Mr Bones",
-  "year":2001
-}
+movie = {"name": "Mr Bones", "year": 2001}
 
-detail = {
-  "actor":"Leon",
-  "director":"Dzithendo"
-}
+detail = {"actor": "Leon", "director": "Dzithendo"}
 
 movie_details = {**movie, **detail}
 print(movie_details)
 
-price=[1000,1200,400]
-price_copy=[*price]
-price_copy1=[50, 40, *price, 60]
+price = [1000, 1200, 400]
+price_copy = [*price]
+price_copy1 = [50, 40, *price, 60]
 print(price_copy, price_copy1)
