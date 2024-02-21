@@ -39,7 +39,7 @@ avengers = [
 ]
 
 # lengths=[]
-# for heroes in avengers: 
+# for heroes in avengers:
 #   lengths.append(len(heroes))
 # print(lengths)
 
@@ -52,4 +52,6 @@ avengers = [
 # filtered_names = [avenger.upper() for avenger in avengers if len(avenger) > 10 ]
 # print(filtered_names)
 
-
+numbers = [8, 5, 7, 4, 6, 2]
+output = ["Even" if number % 2 == 0 else "Odd" for number in numbers]
+print(output)
