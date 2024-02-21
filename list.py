@@ -38,9 +38,18 @@ avengers = [
     "Thor",
 ]
 
-lengths=[]
-for heroes in avengers: 
-  lengths.append(len(heroes))
-print(lengths)
+# lengths=[]
+# for heroes in avengers: 
+#   lengths.append(len(heroes))
+# print(lengths)
+
+# length = []
+# for i in avengers:
+#   if len(i) > 10:
+#     length.append(i)
+# print(length)
+
+# filtered_names = [avenger.upper() for avenger in avengers if len(avenger) > 10 ]
+# print(filtered_names)
 
 
