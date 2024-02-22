@@ -1,28 +1,23 @@
-# Fahrenheit to Celsius
-#print("Enter Temperature in Fahrenheit: ")
-#fah = float(input())
-#cel = (fah-32)/1.8
-#print("Temperature in Celsius: "+str(round(cel,1))+"°C.")
-# {f} <- does conversion for you and is called interpolation
+quote="I love python"
+# use slicing to extract parts of the string
+slice1 = quote[2:6] # love
+slice2 = quote[7:] # python
+print(slice1)
+print(slice2)
 
-# date of year, find the age of the person
-#from datetime import datetime
-#print("Enter the year born: ")
-#year = int(input())
-#age = datetime.now().year - year
-#print(f"You are {age} years old.")
+print(quote[-1]) # n
+print(quote[-6]) # python, so -1 is last letter of string
+print(quote[::3]) # Ilphn, start:end:skip
+# remember in slice it's -1 so skips every second letter
 
-#find the area of a circle
-#find the radius of a circle
-# r = input("Enter radius of circle: ")
-# a = 3.14 * float(r) ** 2
-# print(f"The area of the circle is {a}")
+# exploring advance slicing features
+reverse_first_char = quote[-1]
+substring = quote[-6:]
+skip_characters = quote[::3]
+print(reverse_first_char)
+print(substring)
+print(skip_characters)
 
-# percentage=int(input("enter percentage: "))
-# num_of_equals=int(percentage//10)
-# print("="*num_of_equals)
-# print(percentage)
-
-# quote="I love python"
-# print(quote[::-6])
+# reversing the whole string using slicing, -1 means skipping none
+print(quote[::-1]) # nohtyp evol I
 

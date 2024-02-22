@@ -1,9 +1,28 @@
-# mutable
-# marks=[1,2,3,4,5,6, 7, 8, 9]
-# copy_of_marks=marks[0:len(marks)]
-# print()
-# print(list)
+# lists are mutable (allowing dynamic modifications)
+marks = [98, 75, 40, 80, 90]
+print("Original list: ", marks)
 
+# remove elements like pop demonstrates mutability
+marks.pop()
+print("List after .pop():", marks)
+
+# modifying element by index
+marks[2] = 85 # -> 40 to 85
+print("List after modifying an element:", marks)
+
+# adding and removing elements
+subjects = ['Maths', 'Science']
+subjects.append('English') # adding an element
+print("After append:", subjects)
+
+subjects.remove('Science') # removing an element
+print("After remove:", subjects)
+
+marks.insert(1, 88) # insert 88 at index 1 
+print("After insert:", marks)
+
+popped_mark = marks.pop(2)
+print("After pop:", marks, " Popped element:", popped_mark)
 # scrambled_message = "world the save to time no is there"
 # scrambled_list=scrambled_message.split(' ')
 # print(" ".join(scrambled_list[::-1]))
