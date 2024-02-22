@@ -21,3 +21,7 @@
 # coordinates = [(5, 4), (1, 1), (6, 10), (9, 10)]
 # distances = [round((x**2 + y**2)**0.5, 2) for x, y in coordinates]
 # print(distances)
+
+# 22/02/2024
+t1, t2, *_, t3= (100, 200, 300, 400, 60, 40, 30) #skips multiple
+t1, t2, *t3, t4 = (100, 200, 300, 400, 60, 40, 30)

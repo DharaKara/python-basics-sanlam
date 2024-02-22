@@ -185,14 +185,38 @@ blacklist = ["Dave", "Eve"]
 # print(updated_employees)
 # --------------------------------------------------------------
 
-movie = {"name": "Mr Bones", "year": 2001}
+# movie = {
+#   "name": "Mr Bones",
+#   "year": 2001
+# }
 
-detail = {"actor": "Leon", "director": "Dzithendo"}
+# detail = {
+#   "actor": "Leon", 
+#   "director": "Dzithendo"
+# }
 
-movie_details = {**movie, **detail}
-print(movie_details)
+# # Make copy of dicitonary
+# movie_copy1 = movie.copy()
 
-price = [1000, 1200, 400]
-price_copy = [*price]
-price_copy1 = [50, 40, *price, 60]
-print(price_copy, price_copy1)
+# # Unpacking Operator * -> List | ** -> Dictionaries
+# movie_copy2 = {**movie, "rating": 10}
+# print(movie_copy2)
+
+# movie_copy3 = {**movie, "rating":10, "year": 2002} # last "year" overrides previous one
+# print(movie_copy3)
+
+# movie_copy4 = {"rating":10, "year": 2002, **movie} # last "year" overrides previous one
+
+# # the unpacking is like this
+# # {"rating": 10, "year":2002, "name": "Mr Bones", "year":2001} (2001 overrides!)
+
+# print(movie_copy4)
+
+# movie_details = {**movie, **detail}
+# print(movie_details)
+
+# # copy
+# price = [1000, 1200, 400]
+# price_copy = [*price]
+# price_copy1 = [50, 40, *price, 60]
+# print(price_copy, price_copy1)
