@@ -24,6 +24,6 @@ def driving_test(name,age=15,car="Toyota tazz"): # function name, # arguments/pa
 # print(driving_test(20),"GR Corrolla")
 # print(driving_test(20))
 # print(driving_test(21,"dhara")) # type error
-# print(driving_test(age=21,name="dhara")) # no error keyword arguments
+# print(driving_test(age=21,name="dhara")) # no error --> keyword arguments
 # [9,3,8].sort(reverse=true)
-# print(driving_test("dhara"))
+# print(driving_test("dhara")) # order matters
