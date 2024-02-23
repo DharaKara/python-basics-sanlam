@@ -23,6 +23,7 @@ print("After insert:", marks)
 
 popped_mark = marks.pop(2)
 print("After pop:", marks, " Popped element:", popped_mark)
+
 # scrambled_message = "world the save to time no is there"
 # scrambled_list=scrambled_message.split(' ')
 # print(" ".join(scrambled_list[::-1]))
