@@ -1,3 +1,4 @@
+# Defining/declaring functions
 # Task 1: Add Room Function
 def add_room(rooms, room_number, bed_type="Double", smoking=False):
   new_room = {
@@ -21,7 +22,7 @@ def list_available_rooms(rooms):
   available_rooms = [room["room_number"] for room in rooms if room["availability"]]
   return ("Available Rooms:", available_rooms)
 
-# calling functions
+# Calling functions
 # Task 1 continued: Adding rooms
 rooms = []
 add_room(rooms, 101)
