@@ -101,4 +101,4 @@ print(min([10,-1,30,60]))
 
 print(all([True,False,True]))
 
-# falsy vals -> 0, [], none, {}, "", etc.
+# falsy vals -> 0, [], none, {}, "", set(), etc.
