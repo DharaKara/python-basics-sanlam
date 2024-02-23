@@ -40,9 +40,31 @@ from datetime import datetime
 # print(f"Serves: {recipe['servings']} people")
 
 # # Task 2 party invite
-# guests = ["Alice", "Bob", "Charlie"]
-# party_date = datetime(2024, 3, 14)
-# # Party Invite Output
-# for guest in guests:
-#     print(f"*{guest:^25}*")
-#     print(f"You are invited to the party on {party_date:%B %d, %Y}!")
+guests = ["Alice", "Bob", "Charlie"]
+party_date = datetime(2024, 3, 14)
+# Party Invite Output
+for guest in guests:
+    print(f"*{guest:^25}*")
+    print(f"You are invited to the party on {party_date:%B %d, %Y}!")
+
+classes = {
+    "Class A": [
+        {"name": "Alice", "grades": [82, 90, 88]},
+        {"name": "Bob", "grades": [78, 81, 86]},
+        {"name": "Charlie", "grades": [85, 85, 87]}
+    ],
+    "Class B": [
+        {"name": "Dave", "grades": [92, 93, 88]},
+        {"name": "Eve", "grades": [76, 88, 91]},
+        {"name": "Frank", "grades": [88, 90, 92]}
+    ]
+}
+
+# Task 1
+average_grades = {}
+for class_name, students in classes.items():
+    total_grade = sum(sum(student["grades"]) for student in students)
+    average_grade = total_grade / (len(students) * len(students[0]["grades"]))
+    average_grades[class_name.lower()] = round(average_grade, 2)
+print("Task 1 output:", average_grades)
+
