@@ -1,0 +1,46 @@
+### Currying:
+Currying is a concept in functional programming where a function that takes multiple arguments is transformed into a sequence of functions, each taking a single argument. 
+
+In a curried function, instead of accepting all arguments at once, the function accepts the first argument and returns a new function that accepts the second argument, and so on, until all arguments are received. This allows for more flexible and reusable code.
+
+Here's a simple example in JavaScript:
+
+```javascript
+// Non-curried function
+function add(x, y) {
+    return x + y;
+}
+
+console.log(add(3, 4)); // Outputs: 7
+
+// Curried version
+function curriedAdd(x) {
+    return function(y) {
+        return x + y;
+    };
+}
+
+const add3 = curriedAdd(3);
+console.log(add3(4)); // Outputs: 7
+```
+
+In the example above, `curriedAdd` is a curried function. It takes one argument (`x`) and returns another function that takes the second argument (`y`). This allows us to partially apply the function, meaning we can create specialized versions of it by fixing some of its arguments.
+
+### Partial Application (Portion):
+Partial application, sometimes referred to as "portion", is closely related to currying. It involves fixing a number of arguments to a function, producing a new function with fewer parameters. 
+
+While currying always produces a chain of unary functions (functions accepting one argument), partial application produces functions of any arity (functions accepting any number of arguments).
+
+Here's a simple example extending the previous JavaScript example to showcase partial application:
+
+```javascript
+// Partial application example
+function add(x, y, z) {
+    return x + y + z;
+}
+
+const add5 = add.bind(null, 5); // Fixes the first argument to 5
+console.log(add5(3, 2)); // Outputs: 10
+```
+
+In this example, `add.bind(null, 5)` creates a new function where the first argument `x` is fixed to 5, resulting in a new function that only needs two more arguments (`y` and `z`). This process of binding arguments to a function is partial application.
