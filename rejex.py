@@ -58,9 +58,16 @@ import re
 # list_websites = "facebook.com, google.com, twitter.in"
 # result = re.sub(r'(facebook).com', 'blacklist.com', list_websites)
 # print(result)
-# result1 = re.sub(r'(\w+)(\.com)', r'\1.subdomain\2', list_websites)
+# result1 = re.sub(r'(\w+)\s+(\.com)', r'\1.subdomain\2', list_websites)
 # print(result1)
 
-names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
-result = [re.sub(r'^(\w+) (\w+)$', r'\2, \1', name) for name in names]
-print(result)
+# names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
+# result = [re.sub(r'^(\w+) (\w+)$', r'\2, \1', name) for name in names]
+# print(result)
+
+# Assignment
+post = "Loving the #sunny weather in #California. #travel #fun"
+# Output
+['#sunny', '#California', '#travel', '#fun']
+hashtags = re.findall(r'#\w+', post)
+print(hashtags)
