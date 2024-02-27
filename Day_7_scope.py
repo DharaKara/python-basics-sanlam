@@ -40,6 +40,8 @@
 #     return add1
 # print(add(10)(5))
 
+# add = lambda x: (lambda y: x + y)
+
 # def fun(nums=[]):
 #     nums.append(10)
 #     print(nums)
@@ -58,7 +60,7 @@
 # fun() # [10]
 # fun() # [10]  
 
-def fun(nums=None):
+def fun(nums=None): # provide immutable value
     if nums is None:
         nums = [10]
     print(nums)
