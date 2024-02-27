@@ -66,10 +66,11 @@ names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
 # print(result)
 
 # alternative way to do it without list comp
-# result = []
-# for name in names:
-#   result.append(re.sub(r'(\w+)\s+(\w+)',r'\2, \1', name).strip())
-# print(result)
+result = []
+for name in names:
+  result.append(re.sub(r'(\w+)\s+(\w+)',r'\2, \1', name).strip())
+  
+print(result)
 
 # # Assignment
 # post = "Loving the #sunny weather in #California. #travel #fun"
@@ -77,3 +78,13 @@ names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
 # ['#sunny', '#California', '#travel', '#fun']
 # hashtags = re.findall(r'#\w+', post)
 # print(hashtags)
+
+# Virtual Environment (creates a copy of your python in your repository)
+# print() 3.10.8
+# print() 3.14 -- 3 years print(f"abc [abc]") breaking change 
+
+# ctrl + ~ --> Open/Close Terminal
+# python -m venv myenv <- create local copy? yes
+# .\myenv\Scripts\Activate.ps1
+# deactivate
+
