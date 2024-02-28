@@ -1,4 +1,5 @@
-import re 
+import re
+
 # Rejex -> Regular Expression
 # Pattern match in a string
 # number = """
@@ -27,7 +28,7 @@ import re
 # (…)	Capture Group
 # (a(bc))	Capture Sub-group
 # (.*)	Capture all
-# (abc|def)	Matches abc or def 
+# (abc|def)	Matches abc or def
 
 # quote = "To be or not to be"
 # # r - raw
@@ -68,8 +69,8 @@ names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
 # alternative way to do it without list comp
 result = []
 for name in names:
-  result.append(re.sub(r'(\w+)\s+(\w+)',r'\2, \1', name).strip())
-  
+    result.append(re.sub(r"(\w+)\s+(\w+)", r"\2, \1", name).strip())
+
 print(result)
 
 # # Assignment
@@ -81,10 +82,9 @@ print(result)
 
 # Virtual Environment (creates a copy of your python in your repository)
 # print() 3.10.8
-# print() 3.14 -- 3 years print(f"abc [abc]") breaking change 
+# print() 3.14 -- 3 years print(f"abc [abc]") breaking change
 
 # ctrl + ~ --> Open/Close Terminal
 # python -m venv myenv <- create local copy? yes
 # .\myenv\Scripts\Activate.ps1
 # deactivate
-
