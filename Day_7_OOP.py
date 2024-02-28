@@ -1,5 +1,6 @@
 from datetime import datetime
-#  How not to do it 
+
+#  How not to do it
 # class Car0:
 #     Car0.name="Toyata"
 #     ca
@@ -18,20 +19,26 @@ from datetime import datetime
 # ferrari = Car("Ferrari", "v8", 4, 2)
 # print(ferrari.name, ferrari.wheels)
 
+
+# Encapsulation | putting in all together in one container | giving access
 # Bank Account
 class Bank:
+    interest_rate = 0.2
+
     def __init__(self, acc_no, name, balance):
-        self.acc_no = acc_no
+        # instance variables
+        self.acc_no = acc_no  # private - can't change and access
         self.name = name
-        self.balance = balance
+        self.__balance = balance  # private variable
         self.transactions = []
+        self.last_interest_applied = datetime.now()
 
     def display_balance(self):
-        return f"Your balance is: R{self.balance:,}"
+        return f"Your balance is: R{self.__balance:,}"
 
     def withdraw(self, amount):
         if amount <= self.balance:
-            self.balance -= amount
+            self.__balance -= amount
             self.transactions.append(("withdraw", amount, datetime.now()))
             return f"Success. {self.display_balance()}"
         else:
@@ -39,7 +46,7 @@ class Bank:
 
     def deposit(self, amount):
         if amount > 0:
-            self.balance += amount
+            self.__balancebalance += amount
             self.transactions.append(("deposit", amount, datetime.now()))
             return f"Success. {self.display_balance()}"
         else:
@@ -50,23 +57,32 @@ class Bank:
             print("No transactions.")
         print("{:<3}  {:<10}  {:<9}  {}".format("id", "Date", "Type", "Amount"))
         for i, (trans_type, amount, date) in enumerate(self.transactions, start=1):
-            print("{:<3}  {:<10}  {:<9}  R{:<,.2f}".format(i, date.strftime('%d %b'), trans_type.capitalize(), amount))
+            print(
+                "{:<3}  {:<10}  {:<9}  R{:<,.2f}".format(
+                    i, date.strftime("%d %b"), trans_type.capitalize(), amount
+                )
+            )
 
-# Task 1
+    def apply_interest(self):
+        self.__balance += self.__balance * Bank.interest_rate
+
+
+# Task 1 - objects/instances of class
 gemma = Bank(123, "Gemma Porrill", 15_000)
-dhara = Bank(124, "Dhara Kara", 50_001) 
-caleb = Bank(125, "Caleb Potts", 100_000)    
+dhara = Bank(124, "Dhara Kara", 50_001)
+caleb = Bank(125, "Caleb Potts", 100_000)
 
-# Task 2 and 3
+# Task 2 display balance and 3 withdraw
 print(caleb.withdraw(2_000))
 
-# Task 4
+# Task 4 deposit
 print(dhara.deposit(10_000))
 print(dhara.withdraw(2_000))
 print(dhara.withdraw(8_000))
 
+# PEP 8: Python Enhancement Proposals
 # Assignment - Transactions Tomorrow
-# #  id   Date       Type     Amount  
+# #  id   Date       Type     Amount
 # 1.  1  29 Feb   withdraw       2000
 # 2.  2  1 Mar    deposit        6000
 # 3.  3  3 Mar    deposit        7000
