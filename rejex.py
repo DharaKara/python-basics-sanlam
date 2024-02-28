@@ -62,23 +62,22 @@ import re
 # result1 = re.sub(r'(\w+)\s+(\.com)', r'\1.subdomain\2', list_websites)
 # print(result1)
 
-names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
+# names = ["John Doe", "Jane Smith", "Alice Johnson", "Chris Evans"]
 # result = [re.sub(r'^(\w+) (\w+)$', r'\2, \1', name) for name in names]
 # print(result)
 
 # alternative way to do it without list comp
-result = []
-for name in names:
-    result.append(re.sub(r"(\w+)\s+(\w+)", r"\2, \1", name).strip())
+# result = []
+# for name in names:
+#     result.append(re.sub(r"(\w+)\s+(\w+)", r"\2, \1", name).strip())
 
-print(result)
+# print(result)
 
 # # Assignment
-# post = "Loving the #sunny weather in #California. #travel #fun"
-# # Output
-# ['#sunny', '#California', '#travel', '#fun']
-# hashtags = re.findall(r'#\w+', post)
-# print(hashtags)
+post = "Loving the #sunny weather in #California. #travel #fun"
+# # Output --> ['#sunny', '#California', '#travel', '#fun']
+hashtags = re.findall(r"#\w+", post)
+print(hashtags)
 
 # Virtual Environment (creates a copy of your python in your repository)
 # print() 3.10.8
