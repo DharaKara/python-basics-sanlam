@@ -105,7 +105,7 @@ class CheckingAccount(Bank):
     def __str__(self):
         return f"This account belongs to {self.name} and has a balance of {self._balance:,}"
 
-    def __repr__(self):  # -> repr(alex)
+    def __repr__(self):  # -> repr(alex) reconstructing
         """DX: String --> Class"""
         return f"CheckingAccount({self.acc_no}, '{self.name}', {self._balance})"
 
