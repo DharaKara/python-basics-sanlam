@@ -27,7 +27,7 @@ def calculate_age():
         current_year = datetime.now().year
         age = current_year - year
         print(f"Your age is {age}")
-    except ValueError as ve:
+    except ValueError as ve:  # if its less than 0
         print(f"Error: {ve}")
         print("Please enter a valid year.")
     except TypeError as te:

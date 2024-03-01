@@ -7,22 +7,75 @@
     <!-- adapt phone -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is cool</title>
+    <!-- internal - seperation of concern, not reusable -->
+    <!-- one round trip, max 200 lines -->
     <style>
+        /* types of selectors:
+        1. elements - p, h2, h3 
+        2. class .brand (can reuse classes like funcs DRY)
+        3. id #main (use only once) 
+        */
+
+        /* declaration block {} */
+        /* ul selector */
+        /* color: crimson property: value*/
         ul {
-            columns: crimson;
+            color: crimson; /* text colour, background color is for background */
             color: #ff0d7f; /* hex value Red Green Blue - oldest whole world supports */
             color: rgba(255 13 126); /* hex value Red Green Blue */
             color: hsl(331.74deg 100% 52.55% / 89%); /* hue suturation lightness - human friendly */
-        }
+        } 
+        /* srgb, adobe srgb, dcbi covered */
 
-        p {
+        /* p {
             font-style: italic;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 14px; default font is 16px 
             text-align: center;
             text-transform: uppercase;
+        } */
+
+        /* ctrl space -> auto complete */
+        h2 {
+            text-decoration: underline;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+
+        /* .brand -> class selector | reuse like funcs */
+        .brand {
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            color: orange;
+        }
+
+        /* unique - use only once */
+        #main {
+            color: purple;
+            font-size: 24px;
+        }
+
+        a {
+            text-decoration: none;
+            color: hotpink;
+        }
+
+        .navigation {
+            list-style-type: none;
+        }
+
+        div {
+            background-color: skyblue;
         }
     </style>
+    <!-- keep heading and body seperate for visual impairment people to know importance, h1 being most important to p being after -->
+<!-- link tag to link external style sheet -->
 </head>
 <!-- tags/elements -->
 <body>
@@ -32,7 +85,10 @@
     <h4>Hello, Hacked 🚀😁🤩</h4>
     <h5>Hello, Hacked 🚀😁🤩</h5>
     <h6>Hello, Hacked 🚀😁🤩</h6>
-    <p>Hi All 🚀🤩</p>  
+    <div>
+        <p>This is a paragraph of text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus lorem quis lectus ullamcorper, eget posuere elit vehicula. Integer eget tortor non purus fermentum faucibus eget non nunc. </p>  
+        <p class="brand">Luxury Brand</p>  
+    </div>
     <!-- theres no h7 so it wont error out but give nomal text -->
 
     <!-- ul>li*5 (Emmet shortcuts) -->
@@ -49,12 +105,18 @@
     <!-- ordered list -->
     <ol>
         <!-- list item -->
-        <li>Gaming</li>
+        <li id="main">Gaming</li>
         <li>Books</li>
         <li>Running</li>
         <li>Movies</li>
         <li>Series</li>
     </ol>
+    
+    <ul class="navigation">
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/">Home Page</a></li>
+    </ul>
 </body>
 </html>
 <!-- right click file and click on open with live server (to see output)-->

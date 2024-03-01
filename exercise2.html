@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rounded Buttons</title>
+<style>
+    .rounded-container {
+        border-radius: 20px; /* Rounded corners */
+        padding: 10px 20px; /* Padding around content */
+        display: inline-block; /* Display as inline block to fit content */
+        margin-right: 5px; /* Spacing between buttons */
+        margin-bottom: 10px; /* Spacing between rows */
+        background-color: rgba(0, 0, 0, 0.1); /* Default background color */
+    }
+
+    .rounded-container img {
+        width: 20px; /* Adjust image size */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 5px; /* Spacing between image and text */
+        vertical-align: middle; /* Align image vertically */
+    }
+
+    .rounded-container p {
+        margin: 0; /* Remove default margin */
+        display: inline; /* Display text inline */
+        vertical-align: middle; /* Align text vertically */
+    }
+
+    /* Different background colors for each container */
+    .container-blue {
+        color: hsl(197, 71%, 25%); /* Blue color with 20% opacity */
+        background-color: hsl(197, 71%, 91%);
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container-purple {
+        color: hsl(300, 100%, 25%);
+        background-color: hsl(300, 100%, 91%); /* Purple color with 20% opacity */
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+        /* serif (news, banks) - trust me, old, traditional, serious */
+        /* sans serif (sanlam, youtube) - trend, playful, not serious (we are fun) */
+    }
+
+    .container-pink {
+        color: hsl(348, 83%, 25%);
+        background-color: hsl(348, 83%, 91%); /* Pink color with 20% opacity */
+        font-weight: bolder;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+</head>
+<body>
+
+<div class="rounded-container container-blue">
+    <img src="art.png" alt="Image">
+    <p>Art</p>
+</div>
+
+<div class="rounded-container container-purple">
+    <img src="business.png" alt="Image">
+    <p>Business</p>
+</div>
+
+<div class="rounded-container container-pink">
+    <img src="design.png" alt="Image">
+    <p>Design</p>
+</div>
+
+</body>
+</html>
