@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        .container {
+            background: orange;
+            /* width: 500px; */
+            width: 50%;
+        }
+
+        p {
+            background: purple;
+        }
+
+        a {
+            background: pink;
+        }
+
+        /* .web {
+            display: block; converting to block from inline
+            height: 400px; inline elements do not respect height and width 
+            width: 300px;
+        } */
+
+        .web {
+            display: inline-block; /* hybrid of block and inline */ 
+            height: 400px; /* respects height and width side by side */
+            width: 300px;
+        }
+        /* we talked about display:
+        inline, block, inline-block, none */
+
+        img {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <a class="web" href="Google.com">Google</a><a href="">Link 10</a>
+    <!-- display: block -->
+    <!-- full width of container -->
+    <!-- respectss height and width -->
+    <p>Para 1</p>
+    <p>Para 2</p>
+
+    <!-- display: inline -->
+    <!-- only content width -->
+    <div class="container">
+        <a href="">Link 1</a>
+    </div>
+    <a href="">Link 2</a>
+    
+    <div class="container">
+        <p>Para 1</p>
+        <p>Para 2</p>
+        <h1>Cool</h1>
+    </div>
+
+    <!-- inline-block element -->
+    <img src="https://th.bing.com/th/id/R.1b5d93fcc52e20a5b0ed79250c8ab387?rik=nx5Fpgea9g6RMQ&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f02%2fnow-i-am-free.jpg&ehk=SsbAH1k3s%2fsYdA90AzEWYXxbMQPtzPRG6B%2b0NB8JduA%3d&risl=1&pid=ImgRaw&r=0" alt=""><p>Para 2</p>
+    <!-- <a href="">Link 2</a> -->
+</body>
+</html>

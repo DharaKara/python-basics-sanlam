@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* inherited */
+            color: purple;
+            font-size: 24px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-style: italic;
+
+            /* not inherited */
+            background: plum;
+            border: 5px solid palevioletred;
+            border-style: dashed; /* overiding */
+            /* there are other borders, solid, dotted, dashed */
+            height: 500px;
+            padding: 16px;
+        }
+
+        /* p {
+            border: 4px solid crimson;
+            height: 500px;
+            padding: 16px;
+            background: orange; 
+        } */
+
+        .landscape {
+            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+            width: 300px; /* Adjust width as needed */
+            height: 300px; /* Adjust height as needed */
+            overflow: hidden; /* Hide any content outside the shape */
+        }
+
+        .landscape img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>vnvsd</p>
+        <p>cicns</p>
+        <p>dncdcis</p>
+    </div><br><br>
+    <div class="landscape">
+        <img src="https://th.bing.com/th/id/OIP.XgsZhB_vl9Dd3m-ie2ak3QEsDI?rs=1&pid=ImgDetMain" alt="">
+    </div>
+</body>
+</html>
