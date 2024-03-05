@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* mobile first is still usable on desktop */
+        /* desktop first doesnt make is usable for mobile */
+        .box1 {
+            background: plum;
+            height: 300px;
+            width: 300px;
+        }
+
+        /* when looks cramp, break */
+        /* breakpoint 1 */
+        @media (min-width: 900px) {
+            /* until 490px it acts like commented code | 900px wakes up */
+            .box1 {
+                background: purple;
+                border-radius: 50%;
+            }
+        }
+
+        /* breakpoint 2 */
+        @media (min-width: 425px) {
+            /* until 425px it acts like commented code | 425px wakes up */
+            .box1 {
+                /* cascading overriding */
+                background: crimson;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

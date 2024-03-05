@@ -19,21 +19,35 @@
  
       .box2 {
         background: purple;
+        width: 50px;
       }
  
       .box3 {
         background: pink;
+        width: 100px;
+        border: 2px;
       }
  
       .container {
+        /* display: flex;
+        flex-wrap: wrap; */
         display: grid;
-        grid-template-columns: 1fr, 1fr, 1fr;
-        grid-template-columns: 1fr, 2fr, 1fr;
-        grid-template-columns: repeat(3, 1fr); 
-        /* ratio space */
+        /* fr - fractional unit - ratios */
+        /* 1fr 1fr 1fr -> 1:1:1 */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-template-columns: 1fr 2fr; */
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+        /* row-gap: 20px;
+        column-gap: 10px; */
+ 
         /* flex vs grid */
-        /* flex doesnt understand 2d layout but grid does */
-      }
+        /* flex - 1D */
+        /* grid - 2D */
+}
     </style>
   </head>
   <body>
@@ -45,6 +59,24 @@
         </p>
       </div>
       <div class="box2">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+          voluptatem.
+        </p>
+      </div>
+      <div class="box3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+          voluptatem.
+        </p>
+      </div>
+      <div class="box3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+          voluptatem.
+        </p>
+      </div>
+      <div class="box3">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
           voluptatem.

@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .box1,
+      /* .box1,
       .box2,
       .box3 {
-        /* display: inline-block; */
         height: 300px;
         width: 200px;
-      }
+      } */
  
       .box1 {
         background: plum;
@@ -27,12 +26,16 @@
  
       .container {
         display: grid;
-        grid-template-columns: 1fr, 1fr, 1fr;
-        grid-template-columns: 1fr, 2fr, 1fr;
-        grid-template-columns: repeat(3, 1fr); 
-        /* ratio space */
-        /* flex vs grid */
-        /* flex doesnt understand 2d layout but grid does */
+        /* mobile first, stacked upon each other */
+        /* easy way -> RAM - repeat auto-fit minmax */
+        /* /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
+      } 
+
+      @media (min-width: 440px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
       }
     </style>
   </head>

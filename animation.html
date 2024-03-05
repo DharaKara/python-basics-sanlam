@@ -21,27 +21,26 @@
             cursor: pointer;
         }
 
+        /* pseudo class - fake class (hover, active) */
         .box:hover {
             background: crimson;
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-40px);
         }
 
         .box:active {
             background: teal;
             transform: scale(0.9) rotate(360deg);
-            border-radius: 50%;
+            border-radius: 50%; /*circle*/
         }
 
         .like-button {
             font-family: sans-serif;
-            border: 2px solid purple;
+            /* border: 2px solid purple; */
             padding: 8px;
-            transition: 0.2s transform;
+            transition: 0.2s all;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 32px;
-            width: 30px;
-            height: auto;
+            font-size: 64px;
         }
 
         .like-button:hover {
