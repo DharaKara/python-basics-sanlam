@@ -1,5 +1,6 @@
 import asyncio
 import aiohttp
+from pprint import pprint
 
 # async def get_names(url):
 #     async with aiohttp.ClientSession() as session:
@@ -93,33 +94,66 @@ import aiohttp
 
 # asyncio.run(main())
 
+# day 22 async post
+# async def create_user(new_user):
+#     print(new_user)
+#     url = f"https://65f82895b4f842e808871430.mockapi.io/users"
+#     async with aiohttp.ClientSession() as session:
+#         async with session.post(url, json=new_user) as response:
+#             user = await response.json()
+#             return user
 
-# task 2: human rights day
-async def fetch_users():
-    url = "https://65f82895b4f842e808871430.mockapi.io/users"
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            users = await response.json()
-            return [user["id"] for user in users]
+# # Task 2: Create 5 users using the user_list
+# async def main():
+#     # new_user = {
+#     #     "name": "Dhara Tina Kara",
+#     #     "avatar": "https://static.vecteezy.com/system/resources/previews/020/297/008/non_2x/south-africa-human-rights-day-march-21-for-greeting-card-poster-banner-template-free-vector.jpg",
+#     # }
+#     # user_data = await create_user(new_user)
+#     # print(user_data)
+
+#     user_list = ["Alex", "Gemma", "Thato", "Lilitha", "Dhara"]
+#     create_user_tasks = [
+#         create_user(
+#             {
+#                 "name": name,
+#                 "avatar": "https://th.bing.com/th/id/OIP.K4XfRyYNnlwsR9-qdE-lrQAAAA?rs=1&pid=ImgDetMain",
+#             }
+#         )
+#         for name in user_list
+#     ]
+#     user_data = await asyncio.gather(*create_user_tasks)
+#     pprint(user_data)
 
 
-async def update_avatar(user_id):
-    url = f"https://65f82895b4f842e808871430.mockapi.io/users/{user_id}"
-    data = {
-        "avatar": "https://static.vecteezy.com/system/resources/previews/020/297/008/non_2x/south-africa-human-rights-day-march-21-for-greeting-card-poster-banner-template-free-vector.jpg"
-    }
-    async with aiohttp.ClientSession() as session:
-        async with session.put(url, json=data) as response:
-            if response.status == 200:
-                print(f"Avatar updated for user with ID {user_id}")
-            else:
-                print(f"Failed to update avatar for user with ID {user_id}")
+# asyncio.run(main())
+
+# task 3: human rights day
+# async def fetch_users():
+#     url = "https://65f82895b4f842e808871430.mockapi.io/users"
+#     async with aiohttp.ClientSession() as session:
+#         async with session.get(url) as response:
+#             users = await response.json()
+#             return [user["id"] for user in users]
 
 
-async def main():
-    user_ids = await fetch_users()
-    tasks = [update_avatar(user_id) for user_id in user_ids]
-    await asyncio.gather(*tasks)
+# async def update_avatar(user_id):
+#     url = f"https://65f82895b4f842e808871430.mockapi.io/users/{user_id}"
+#     data = {
+#         "avatar": "https://static.vecteezy.com/system/resources/previews/020/297/008/non_2x/south-africa-human-rights-day-march-21-for-greeting-card-poster-banner-template-free-vector.jpg"
+#     }
+#     async with aiohttp.ClientSession() as session:
+#         async with session.put(url, json=data) as response:
+#             if response.status == 200:
+#                 print(f"Avatar updated for user with ID {user_id}")
+#             else:
+#                 print(f"Failed to update avatar for user with ID {user_id}")
 
 
-asyncio.run(main())
+# async def main():
+#     user_ids = await fetch_users()
+#     tasks = [update_avatar(user_id) for user_id in user_ids]
+#     await asyncio.gather(*tasks)
+
+
+# asyncio.run(main())

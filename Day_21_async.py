@@ -104,37 +104,36 @@ async def make_cereal():
 
 
 # Async func with event loop
-# async def main():
-#     await cooking_eggs()
-#     await make_coffee()
-#     print("Bread Toast 1")
-#     print("Bread Toast 2")
-#     print("Bread Toast 3")
-#     print("Bread Toast 4")
-#     await task1
-
-
-# Async func with event loop
 async def main():
-    # all async funcs returns a co-coroutine
-    # you can do it this way as well:
-    all_co_routines = [cooking_eggs(), make_coffee(), make_cereal()]
-    # task1 = asyncio.create_task(cooking_eggs()) # schedule things in event loop
-    # task2 = asyncio.create_task(make_coffee())
-    # task3 = asyncio.create_task(make_cereal())
-    # all_tasks = [task1, task2, task3]
+    await asyncio.create_task(cooking_eggs())
+    await asyncio.create_task(make_coffee())
     print("Bread Toast 1")
     print("Bread Toast 2")
     print("Bread Toast 3")
     print("Bread Toast 4")
-    await asyncio.sleep(6)
-    # await task2
-    # wait is to complete tasks but not the best when you dont know how long each task is, so you use gather
-    # if not scheduled (create task) then it starts here
-    data = await asyncio.gather(
-        *all_co_routines
-    )  # dtype - not a dict, a set of tasks to complete all, wait till longest one is completed
-    print(data)  # order of tasks
+
+
+# Async func with event loop
+# async def main():
+#     # all async funcs returns a co-coroutine
+#     # you can do it this way as well:
+#     all_co_routines = [cooking_eggs(), make_coffee(), make_cereal()]
+#     # task1 = asyncio.create_task(cooking_eggs()) # schedule things in event loop
+#     # task2 = asyncio.create_task(make_coffee())
+#     # task3 = asyncio.create_task(make_cereal())
+#     # all_tasks = [task1, task2, task3]
+#     print("Bread Toast 1")
+#     print("Bread Toast 2")
+#     print("Bread Toast 3")
+#     print("Bread Toast 4")
+#     await asyncio.sleep(6)
+#     # await task2
+#     # wait is to complete tasks but not the best when you dont know how long each task is, so you use gather
+#     # if not scheduled (create task) then it starts here
+#     data = await asyncio.gather(
+#         *all_co_routines
+#     )  # dtype - not a dict, a set of tasks to complete all, wait till longest one is completed
+#     print(data)  # order of tasks
 
 
 asyncio.run(main())
